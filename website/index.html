@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="website.css">
+    <script src="website.js" defer></script>
+    <script src="https://cdn.tiny.cloud/1/xjfdies84rxjoe3ubj8uqhzbs1xup38qrugdtln7yj56u9vu/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li>Home</li>
+                    <li>Projects</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Login</li>
+                </ul>
+        </nav>
+        </div>
+    </header>
+    <div style="text-align: center;">
+        <a href="index.html"> <img id="profile" alt="picture" src="images/profile-pic.jpg" width="28%" height="28%">
+        </a>
+    </div>
+
+    <section id="content">
+        <div id="home" class="page">
+            <div class="body-tagline">Hi! I am Trey a software developer.TEST!!!</div>
+            <div class="bio">Welcome to my portfolio. I like to think of myself as a goal oriented individual with
+                professional experience in
+                electronic media and design. I have been teaching myself HTML, CSS and Javascript as a side gig while
+                also
+                coaching tennis.</div>
+
+    </section>
+    <div class="random-shape"></div>
+    <section id="web-server-content">
+        <div id="home" class="page">
+            <div class="body-tagline">Hi! I am Trey a software developer.TEST!!!</div>
+            <div class="bio" id="edit1">Welcome to my portfolio. I like to think of myself as a goal oriented
+                individual with
+                professional experience in
+                electronic media and design. I have been teaching myself HTML, CSS and Javascript as a side gig while
+                also
+                coaching tennis.</div>
+
+        </div>
+        <div id="projects" class="page">
+            <div class="body-tagline">Recent Projects TEST!!!</div>
+            <div>
+                <img id="calculator" alt="picture" src="images/calculator.png" width="250" height="250">
+            </div>
+        </div>
+        <div id="about" class="page">
+            <div class="about-bio" id="editable"> TEST !!!Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod
+                tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                in culpa qui officia deserunt mollit anim id est laborum.</div>
+            <div>
+                <img id="mountains" alt="mts" src="images/rocky mts.png">
+            </div>
+            <div>
+                <img id="drums" alt="drums" src="images/drums.jpg">
+            </div>
+
+        </div>
+        <div id="contact" class="page">
+            <div class="body-tagline">Contact Me TEST!!!</div>
+            <div id="name-entry"><input id="fname" type="text" value placeholder="First Name"><input id="lname"
+                    type="text" value placeholder="Last Name"><input id="email" type="text" value
+                    placeholder="Email Address">
+            </div>
+            <div id="message-box">
+                <textarea id="message" placeholder="Write your message here" cols="23" rows="10"></textarea>
+            </div>
+            <div>
+                <input id="submit" type="submit">
+            </div>
+        </div>
+        <div id="Login" class="page">
+            <div class="body-tagline">LOGIN PAGE!!</div>
+            <div class="bio">
+            </div>
+            <input id="email" class="login" type="text" value placeholder="Email Address">
+            <input id="password" class="login" type="password" value placeholder="Password">
+            <button id="logbttn" class="login">Login</button>
+
+
+        </div>
+
+        </div>
+    </section>
+
+    <footer></footer>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        let token = getCookie("token");
+        if (token != "") {
+            console.log("already logged in.");
+            tinymce.init({
+                selector: '#edit1'
+            });
+        }
+    </script>
+</body>
+
+</html>

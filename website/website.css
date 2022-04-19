@@ -1,0 +1,148 @@
+.nav-links ul {
+    list-style-type: none;
+    margin: 1rem;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 1px solid #333;
+    background-color: #333;
+}
+.nav-links li {
+    display: inline;
+    color: white;
+    float: left;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1rem;
+}
+.nav-links li:hover:not(.active) {
+    background-color: #111;
+}
+.active {
+    background-color: rgb(93, 147, 192);
+}
+ #profile {
+    border-radius: 50%;
+    opacity: 50%;
+}
+img#profile:hover {
+    opacity: 100%;
+}
+#calculator {
+    opacity: 80%;
+    float: left;
+    padding: 2px 10px 2px 10px;
+    background-color: #C37500;
+    border-radius: 20px;
+}
+img#calculator:hover {
+    background-color: rgb(93, 147, 192);
+    cursor: pointer;
+    opacity: 100%;
+}
+#mountains {
+    width: 80%;
+    height: 80%;
+}
+.body-tagline {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+}
+#germany {
+    text-align: left;
+}
+img#flag {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.bio {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: smaller;
+    border: none;
+    padding: 2rem;
+    color: white;
+}
+body {
+    background-color: #1d2026;
+
+}
+.email {
+    color: white;
+}
+.phone {
+    color: white;
+}
+.iframe {
+    padding: 3.5rem;
+    text-align: center;
+}
+.about-bio {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: smaller;
+    border: none;
+    padding: 5rem;
+    color: white;
+   
+}
+#content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+}
+
+input {
+    margin: 0.4rem;
+}
+#name-entry {
+    text-align: center;
+}
+#fname {
+    padding: .5rem;
+}
+#lname {
+    padding: .5rem;
+}
+.login {
+    padding: .5rem;
+}
+#email {
+    padding: .5rem;
+}
+#iframe {
+    padding: 1rem;
+}
+#web-server-content {
+    display: none;
+}
+#message-box {
+    margin: auto;
+}
+#message {
+   padding: .5rem;
+   margin: auto;
+}
+#submit {
+width: 5rem;
+height: 2rem;
+font-size: 1rem;
+text-transform: uppercase;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media only screen and (min-width: 420px) {
+    #message {
+        font-size: 1.3rem;
+        padding: .5rem;
+        margin: auto;
+        width: 36rem;
+    }
+    #profile {
+        max-width: 280px;
+        max-height: 280px;
+    }
+}
